@@ -1,14 +1,23 @@
-<h1>hls-video</h1>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<video id="video_smaple" controls>
-<script>
-  if(Hls.isSupported()) {
-    var video = document.getElementById('video_smaple');
-    var hls = new Hls();
-    hls.loadSource('https://d2ec0l6n6mxbn6.cloudfront.net/media/hls/hls/playlist.m3u8?Expires=1617245608&Signature=AqaHcAIzKetWBelojW8RtzqXNv3XXZ833Q3p2AW85JnqjfvUaXen8nuhzQWLowUdxS~uSwptOaGyUU5nDC0JFpTAG~WeaIvv3X-yk~ZtYnda9IjFRyaFOlkKqoLhBMr6DzhoHJILHg60T-vK~4Q-94LHdR7~pmfmLrqq2WW2sJRmmk8n3pdwcL5nvtmbj41pcrEhMJrOPlYsIVE8WXtf~rpeUGnbr4w8dxlis-nUIYV4TsGwVY~F5Nhi6-8k3RXE4K3i7MGgApHts1Cuj-Mhe~PpXP1MRLkals8krGfYHihDch3q5YwN~n8bRtfUlHZNTYptbjKbRB9PY-OtHo6Miw__&Key-Pair-Id=AKIAZYQG7MO4X7H7LXVJ'); //ここで.m3u8ファイルを指定
-    hls.attachMedia(video);
- }
-</script>
+<html>
+  <head>
+    <title>VHS de HLS</title>
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+  </head>
+  <body>
+    <video-js id=example-video width=1280 height=720
+              class="vjs-default-skin" controls>
+      <source
+         src="https://d2ec0l6n6mxbn6.cloudfront.net/media/hls/hls/playlist.m3u8?Expires=1617245608&Signature=AqaHcAIzKetWBelojW8RtzqXNv3XXZ833Q3p2AW85JnqjfvUaXen8nuhzQWLowUdxS~uSwptOaGyUU5nDC0JFpTAG~WeaIvv3X-yk~ZtYnda9IjFRyaFOlkKqoLhBMr6DzhoHJILHg60T-vK~4Q-94LHdR7~pmfmLrqq2WW2sJRmmk8n3pdwcL5nvtmbj41pcrEhMJrOPlYsIVE8WXtf~rpeUGnbr4w8dxlis-nUIYV4TsGwVY~F5Nhi6-8k3RXE4K3i7MGgApHts1Cuj-Mhe~PpXP1MRLkals8krGfYHihDch3q5YwN~n8bRtfUlHZNTYptbjKbRB9PY-OtHo6Miw__&Key-Pair-Id=AKIAZYQG7MO4X7H7LXVJ"
+         type="application/x-mpegURL">
+    </video-js>
+    <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
+    <script>
+      var player = videojs('example-video');
+    </script>
+  </body>
+</html>
 
 
+
+   
 
