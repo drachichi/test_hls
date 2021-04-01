@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>VHS de HLS</title>
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+  </head>
+  <body>
+    <video-js id=example-video width=1280 height=720
+              class="vjs-default-skin" controls>
+      <source
+         src="https://d2hpwf1crh64ui.cloudfront.net/hls/playlist.m3u8?Expires=1617260527&Signature=ZW8PRCEvBtNl8JQyFrQtaIdAr5jLZinCfXm9kfbgTKuRWfc1K-V301KqmAaUNUK4kjyEBjF5akKmE2weRTyhTfMGz46R472zgnINo9VhAhIQIIxiYhQl4LGFf30sPXNetm2mz5vywYDCxTUgcbQCUM0F52o-NVTQLvoxvon9JqMCOj~~Mr7E1cwGuQ8T09o7gaBoJOvtl~MyGeCMufbd61TMxYkI4bwrENpwNgs-fCs2iIVWv-7egBAVo1mdcsiCyCiEgrv2FfjZm905sVvdwCJuRSfjK5ymbXOdsCY7K6MUqgcsM1HN9ADQMOCCn-~FVlE3M5csgyUZ~zZAUjbcJw__&Key-Pair-Id=AKIAZYQG7MO4X7H7LXVJ"
+         type="application/x-mpegURL">
+    </video-js>
+    <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
+    <script>
+      var player = videojs('example-video');
+    </script>
+  </body>
+</html>
